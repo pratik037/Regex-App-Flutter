@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:regexapp/widgets/aboutDev.dart';
 import 'package:regexapp/widgets/dataInput.dart';
 import 'package:regexapp/widgets/validateBtn.dart';
 
@@ -22,17 +23,18 @@ class _MyHomePageState extends State<MyHomePage> {
         centerTitle: true,
         backgroundColor: Colors.white,
         elevation: 0,
+        actions: <Widget>[AboutInfoBtn()],
       ),
       body: ListView(
         scrollDirection: Axis.vertical,
         shrinkWrap: true,
         children: <Widget>[
           Container(
-            height: MediaQuery.of(context).size.height* 0.50,
+            height: MediaQuery.of(context).size.height * 0.50,
             child: Image.asset('assets/logo.png'),
           ),
           DataInput(
-            hint: "^\[a-z\]\$",
+            hint: "^\[a-zA-Z0-9\]\$",
             label: "Regular Expression here",
             controller: _regex,
           ),

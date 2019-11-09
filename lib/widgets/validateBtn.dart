@@ -85,7 +85,7 @@ class ValidateBtn extends StatelessWidget {
             Scaffold.of(context).showSnackBar(SnackBar(
               backgroundColor: Colors.red,
 
-              content: Text("Cannot have empty field", style: TextStyle(fontSize: 25),),
+              content: Text("Cannot have empty field", style: TextStyle(fontSize: 18),),
             ));
           }
         },
